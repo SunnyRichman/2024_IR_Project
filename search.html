@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito">
+        <link rel="stylesheet" href="../css/search.css">
+    </head>
+
+    <body>
+        <header><h1>Search</h1></header>
+        <nav>
+            <div class="left">
+                <a href="/"><p>Home</p></a>
+                <a href="/search"><p>Search</p></a>
+                <a href="/team"><p>Team</p></a>
+            </div>
+            <div class="right">
+                <a href="/login"><p>Login(Admin only)</p></a>
+            </div>
+        </nav>
+        <article>
+            <form action="/searchDetail">
+                <div>
+                    <label for="title"><h3>Title</h3></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type=text name="title" placeholder="Enter the album title"></input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="artist"><h3>Artist</h3></label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="artist" placeholder="Enter the artist's name"></input>
+                </div><br>
+                <div id="row">
+                    <label for="year"><h3>Year</h3></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="year" placeholder="####" style= "width: auto"></input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="eplp"><h3>EP/LP</h3></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select name="eplp" style=" background-color: #F39595; border: none; border-radius: 5px;">
+                        <option selected></option>
+                        <option value="EP">EP</option>
+                        <option value="LP">LP</option>
+                    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div>
+                        <label for="label"><h3>Label</h3></label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input style="width: 65%;" type="text" name="label" placeholder="Enter the label"></input>
+                    </div>
+                </div><br>
+                
+                <div>
+                    <label><h3>Price range</h3></label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="lowPrice" placeholder="Enter lower price here" style= "width: 20%; background-color: #F39595; border: none; border-radius: 5px;"></input>
+                    &nbsp;&nbsp;<h3>-</h3>&nbsp;&nbsp;
+                    <input type="text" name="highPrice" placeholder="Enter higher price here" style= "width: 20%; background-color: #F39595; border: none; border-radius: 5px;"></input>
+                </div><br>
+                <div>
+                    <label for="sort"><h3>Sort</h3></label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <fieldset style= "width: auto; background-color: #F39595; border: none; border-radius: 5px;">
+                        <input type="radio" checked value="" name="sort" style= "width: auto;"></input>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="sort" value="A2Z" style= "width: auto;">A-Z</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="sort" value="Z2A" style= "width: auto;">Z-A</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="sort" value="PriceASC" style= "width: auto;">Price: Low to High</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="sort" value="PriceDESC" style= "width: auto;">Price: High to Low</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                    </fieldset>
+                </div><br>        
+                <div id="last">
+                    <div class="left">
+                    </div>
+                    <div class="right">
+                        <button type="submit">Search</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="reset">Clear</button>
+                    </div>
+                </div>
+            </form>
+        </article>
+        <footer><p>© 2024 FESTA Vinyl Disc and Cassette Co., Ltd.</p></footer>
+    </body>
+</html>
