@@ -23,7 +23,7 @@ app.use(router);
     router.use((req,res,next) => { 
         console.log("404: Invalid accesssed")        
         res.statusCode = 404; 
-        
+        res.sendFile(path.join(`${__dirname}/HTML/error.html`))
     })
 
 /* Run Server */
