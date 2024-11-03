@@ -1,0 +1,15 @@
+{
+  "name": "yao",
+  "version": "1.0.0",
+  "main": "yao-app.js",
+  "scripts": {
+    "start": "nodemon yao-app.js"
+  },
+  "author": "Raweerot Bhasidhchirapiroch",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}
