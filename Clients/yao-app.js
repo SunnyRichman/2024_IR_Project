@@ -9,7 +9,7 @@ router.use(express.urlencoded({ extended: true }));
 app.use('/',express.static(path.join(__dirname,'public')));
 app.use('/CSS',express.static(path.join(__dirname,'/CSS')));
 app.use('/HTML',express.static(path.join(__dirname,'/HTML')));
-// app.use('/Backend',express.static(path.join(__dirname,'../Backend')));
+app.use('/Server',express.static(path.join(__dirname,'../Server')));
 
 app.use(router);
 

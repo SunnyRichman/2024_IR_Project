@@ -8,8 +8,8 @@
     </head>
     <body>
         <header>藥 (Yào)</header>
-        <form method="POST" endpoint="/results">
-            <input placeholder="What do you want from yào? Type here! (你想从 Yao 中得到什麼, 在此处输入!)">
+        <form action="/results">
+            <input type="text" name="query" required placeholder="What do you want from yào? Type here! (你想从 Yao 中得到什麼, 在此处输入!)">
             <button type="submit">Go</button>
             <button type="reset">X</button>
         </form>
