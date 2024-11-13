@@ -25,6 +25,12 @@ app.use(router);
         res.sendFile(path.join(`${__dirname}/HTML/results.html`))
     })
 
+    router.get('/detail',(req,res) => { 
+        console.log("Request at: /detail")
+        res.statusCode = 200; // Status 200: OK
+        res.sendFile(path.join(`${__dirname}/HTML/detail.html`))
+    })
+
     // Every error detected on browser will be redirected to this page.
     router.use((req,res,next) => { 
         console.log("404: Invalid accesssed")        
