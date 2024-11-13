@@ -28,26 +28,36 @@ router.get("/callSearch", async (req, res) => {
   try {
     // Retrieve the query parameter from the request
     let info = req.query.info;
-    
-    // Perform the search asynchronously
+
+    // Perform an initial search to get the total number of hits
+    const initialResult = await client.search({
+      index: "herbs",
+      query: {query_string: {query: info}}
+    });
+
+    const totalHits = initialResult.hits.total.value;
+
+    // Perform a second search with the size set to total hits
     const result = await client.search({
       index: "herbs",
+      size: totalHits, // Dynamically set the size based on the total hits
       query: {
         query_string: {
           query: info
         }
       }
     });
-    
+
     // Send the search hits back as the response
     res.send(result.hits.hits);
-    
+
   } catch (error) {
     // Handle any errors that occur during the search
     console.error("Search error:", error);
     res.status(500).send({ error: "An error occurred during search." });
   }
 });
+
 
 router.get("/callDetail", async (req, res) => {
   try {
