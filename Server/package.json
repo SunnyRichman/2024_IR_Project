@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "yao-app.js",
   "scripts": {
-    "test": "nodemon yao-app.js"
+    "start": "nodemon yao-app.js"
   },
   "author": "Raweerot Bhasidhchirapiroch",
   "license": "ISC",
